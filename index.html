@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Benkhalifa Store | ملابس عصرية بروح جزائرية</title>
+<link rel="icon" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--hd:#0B5D3B;--btn:#0B5D3B;--rd:#C8102E;--bg:#FBFAF6;--tx:#14231B;--card:#fff;--ln:#E3DFD3;--mut:#5A6860;--ac:#0B5D3B;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1A14;--tx:#F1EFE6;--card:#16261D;--ln:#2A3D32;--mut:#9DB0A5;--btn:#178055;--ac:#4FD39A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0E1A14;--tx:#F1EFE6;--card:#16261D;--ln:#2A3D32;--mut:#9DB0A5;--btn:#178055;--ac:#4FD39A;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 16px/1.7 Tajawal,Tahoma,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--hd);z-index:10}
+h1,h2,.logo{font-family:"Reem Kufi",Tajawal,serif;margin:0}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--hd);color:#F6F3E8;display:flex;align-items:center;justify-content:space-between;padding:10px 18px}
+.logo{font-size:24px;font-weight:700;cursor:pointer;user-select:none}
+header span{font-size:14px;opacity:.85}
+.hero{background:var(--hd) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cg fill='none' stroke='%23fff' stroke-opacity='.13'%3E%3Crect x='14' y='14' width='36' height='36'/%3E%3Crect x='14' y='14' width='36' height='36' transform='rotate(45 32 32)'/%3E%3C/g%3E%3C/svg%3E");color:#F6F3E8;padding:56px 20px 64px;text-align:center}
+.hero h1{font-size:clamp(30px,7vw,52px);line-height:1.3;max-width:15em;margin:0 auto 12px}
+.hero p{max-width:30em;margin:0 auto 24px;opacity:.9}
+.flag{height:6px;background:linear-gradient(90deg,var(--hd) 33%,#fff 33% 66%,var(--rd) 66%)}
+.btn{background:var(--btn);color:#fff;border:0;border-radius:6px;padding:10px 20px;font:700 16px Tajawal,sans-serif;cursor:pointer}
+.btn.w{background:#fff;color:#0B5D3B}.btn.o{background:none;color:var(--ac);border:1px solid var(--ln)}.btn.d{background:var(--rd)}
+.btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,.chip:focus-visible{outline:3px solid var(--rd);outline-offset:2px}
+main{max-width:1080px;margin:0 auto;padding:28px 16px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 22px}
+.chip{border:1px solid var(--ln);background:var(--card);color:var(--tx);border-radius:99px;padding:5px 16px;font:500 15px Tajawal,sans-serif;cursor:pointer}
+.chip.on{background:var(--btn);color:#fff;border-color:var(--btn)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--ln);border-radius:10px 10px 4px 4px;overflow:hidden;display:flex;flex-direction:column}
+.ph{aspect-ratio:4/5;background:#E9E4D3 center/cover;display:grid;place-items:center;color:#0B5D3B;font-size:46px}
+.card .in{padding:12px 14px 14px;display:flex;flex-direction:column;gap:4px;flex:1}
+.card h3{margin:0;font-size:18px}.card small{color:var(--mut)}
+.price{color:var(--rd);font-weight:700;font-size:18px}
+:root[data-theme="dark"] .price{color:#FF7A8C}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .price{color:#FF7A8C}}
+.card .btn{margin-top:auto}
+.empty{color:var(--mut);text-align:center;padding:40px 0}
+footer{text-align:center;color:var(--mut);padding:26px 16px 34px;border-top:1px solid var(--ln);font-size:14px}
+dialog{border:1px solid var(--ln);border-radius:10px;background:var(--card);color:var(--tx);width:min(440px,94vw);padding:20px;font-family:Tajawal,sans-serif}
+dialog::backdrop{background:#000a}
+label{display:block;font-weight:500;margin:10px 0 3px;font-size:15px}
+input,select,textarea{width:100%;padding:9px 11px;border:1px solid var(--ln);border-radius:6px;background:var(--bg);color:var(--tx);font:400 16px Tajawal,sans-serif}
+.row{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
+#adm{position:fixed;inset:0;background:var(--bg);z-index:50;overflow:auto;padding:calc(18px + env(safe-area-inset-top,0px)) 16px 40px}
+#adm[hidden]{display:none}
+.box{max-width:640px;margin:0 auto}
+.item{display:flex;gap:10px;align-items:center;border-bottom:1px solid var(--ln);padding:8px 0}
+.item img,.item .t{width:48px;height:48px;border-radius:6px;object-fit:cover;background:#E9E4D3;flex:none}
+.item b{flex:1;min-width:0}
+.err{color:var(--rd);min-height:1.6em;font-size:14px}
+</style>
+</head>
+<body>
+<header><div class="logo" id="logo"><img src="logo.png" alt="Benkhalifa Store" height="46" style="display:block;height:46px;width:auto"></div><span>التوصيل إلى 58 ولاية</span></header>
+<div class="flag"></div>
+<section class="hero">
+<h1>أناقة عصرية بروح جزائرية</h1>
+<p>قطع مختارة بعناية تجمع بين الموضة الحديثة وأصالة الذوق الجزائري. اطلب بسهولة والدفع عند الاستلام.</p>
+<button class="btn w" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">تصفّح المجموعة</button>
+</section>
+<main id="shop">
+<h2>المجموعة</h2>
+<div class="chips" id="chips"></div>
+<div class="grid" id="grid"></div>
+</main>
+<footer><div class="flag" style="max-width:120px;margin:0 auto 12px;border-radius:3px"></div><span id="ft">صُنع بحب في الجزائر</span></footer>
+
+<dialog id="od">
+<h2 id="odt" style="font-size:22px"></h2>
+<div id="odp" class="price"></div>
+<label for="osz">المقاس</label><select id="osz"></select>
+<label for="onm">الاسم الكامل</label><input id="onm" autocomplete="name">
+<label for="oph">رقم الهاتف</label><input id="oph" type="tel" inputmode="tel" autocomplete="tel">
+<label for="owl">الولاية والعنوان</label><input id="owl" placeholder="مثال: وهران، حي ...">
+<div class="err" id="oerr"></div>
+<div class="row"><button class="btn" id="osend">إرسال الطلب عبر واتساب</button><button class="btn o" id="ocl">إغلاق</button></div>
+</dialog>
+
+<section id="adm" hidden><div class="box" id="admc"></div></section>
+
+<script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const ar=n=>'\u2066'+Number(n).toLocaleString('en-US').replace(/,/g,'\u00A0')+'\u2069';
+const money=n=>ar(n)+' \u062f\u062c';
+let P=[],T={wa:''},cat='الكل',tok='',editId=null,cur=null;
+
+async function api(body){
+ const r=await fetch('/api',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+ const j=await r.json().catch(()=>({}));
+ if(r.status===401&&j.error==='401'){tok='';throw new Error('401')}
+ if(!r.ok)throw new Error(j.error||'حدث خطأ. حاول مرة أخرى.');
+ return j}
+async function load(){
+ try{const r=await fetch('/api');if(!r.ok)throw 0;const j=await r.json();P=j.products||[];T=j.settings||{wa:''}}
+ catch(e){$('grid').innerHTML='<p class="empty">تعذّر تحميل المنتجات. أعد تحميل الصفحة.</p>';return}
+ render()}
+
+function render(){
+ const cats=['الكل',...new Set(P.map(p=>p.cat).filter(Boolean))];
+ if(!cats.includes(cat))cat='الكل';
+ $('chips').innerHTML=cats.length>2?cats.map(c=>`<button class="chip${c===cat?' on':''}" data-c="${esc(c)}">${esc(c)}</button>`).join(''):'';
+ const list=P.filter(p=>cat==='الكل'||p.cat===cat);
+ $('grid').innerHTML=list.length?list.map(p=>`<article class="card"><div class="ph"${p.img?` style="background-image:url('${esc(p.img)}')"`:''}>${p.img?'':'✦'}</div><div class="in"><h3>${esc(p.name)}</h3><small>${esc(p.desc)}</small><div class="price">${money(p.price)}</div><button class="btn" data-o="${esc(p.id)}">اطلب الآن</button></div></article>`).join(''):'<p class="empty">ستُضاف المنتجات قريبًا.</p>';
+}
+$('chips').onclick=e=>{const c=e.target.closest('[data-c]');if(c){cat=c.dataset.c;render()}};
+$('grid').onclick=e=>{const b=e.target.closest('[data-o]');if(!b)return;cur=P.find(p=>p.id===b.dataset.o);
+ $('odt').textContent=cur.name;$('odp').textContent=money(cur.price);
+ const sz=(cur.sizes||'').split(/[,،]/).map(s=>s.trim()).filter(Boolean);
+ $('osz').innerHTML=(sz.length?sz:['مقاس موحّد']).map(s=>`<option>${esc(s)}</option>`).join('');
+ $('oerr').textContent='';$('od').showModal()};
+$('ocl').onclick=()=>$('od').close();
+$('osend').onclick=()=>{
+ const n=$('onm').value.trim(),ph=$('oph').value.trim(),w=$('owl').value.trim();
+ if(!n||!ph||!w){$('oerr').textContent='املأ الاسم ورقم الهاتف والعنوان.';return}
+ if(!T.wa){$('oerr').textContent='رقم استقبال الطلبات غير مُعدّ بعد. حاول لاحقًا.';return}
+ const m=`طلب جديد من Benkhalifa Store\nالمنتج: ${cur.name}\nالمقاس: ${$('osz').value}\nالسعر: ${money(cur.price)}\nالاسم: ${n}\nالهاتف: ${ph}\nالعنوان: ${w}`;
+ window.open('https://wa.me/'+T.wa.replace(/\D/g,'')+'?text='+encodeURIComponent(m),'_blank','noopener');$('od').close()};
+
+/* Hidden admin: tap the logo 5 times, or open the link ending with #dz-gate */
+let taps=0,tt;
+const tap=n=>()=>{taps++;clearTimeout(tt);tt=setTimeout(()=>taps=0,1500);if(taps>=n){taps=0;openAdmin()}};
+$('logo').onclick=tap(5);$('ft').onclick=tap(7);
+const chk=()=>{if(location.hash==='#dz-gate')openAdmin()};
+addEventListener('hashchange',chk);chk();
+
+function openAdmin(){$('adm').hidden=false;tok?panel():gate()}
+function closeAdmin(){tok='';$('adm').hidden=true;history.replaceState(null,'',location.pathname+location.search);render()}
+function gate(msg){
+ $('admc').innerHTML=`<h2 style="font-size:26px">دخول الإدارة</h2>
+ <label for="pw">كلمة السر</label><input id="pw" type="password" autocomplete="current-password">
+ <div class="err" id="ge">${esc(msg||'')}</div><div class="row"><button class="btn" id="go">دخول</button><button class="btn o" id="gx">رجوع للمتجر</button></div>`;
+ $('gx').onclick=closeAdmin;
+ const go=async()=>{$('go').disabled=true;try{const j=await api({a:'login',pw:$('pw').value});tok=j.token;panel()}catch(e){$('ge').textContent=e.message;$('go').disabled=false}};
+ $('go').onclick=go;$('pw').onkeydown=e=>{if(e.key==='Enter')go()};$('pw').focus()}
+async function persist(nx,nt){
+ try{await api({a:'save',token:tok,products:nx,settings:nt});P=nx;T=nt;return true}
+ catch(e){if(e.message==='401'){gate('انتهت الجلسة. أدخل كلمة السر مجددًا.')}else alert(e.message);return false}}
+
+function panel(){
+ const e=P.find(p=>p.id===editId)||{name:'',price:'',cat:'',sizes:'',desc:'',img:''};
+ $('admc').innerHTML=`<div style="display:flex;justify-content:space-between;align-items:center"><h2 style="font-size:26px">لوحة التحكم</h2><button class="btn o" id="lo">خروج</button></div>
+ <h3>${editId?'تعديل منتج':'إضافة منتج'}</h3>
+ <label for="fn">اسم المنتج</label><input id="fn" value="${esc(e.name)}">
+ <label for="fp">السعر (دج)</label><input id="fp" type="number" inputmode="numeric" min="0" value="${esc(e.price)}">
+ <label for="fc">القسم</label><input id="fc" list="cl" value="${esc(e.cat)}" placeholder="رجالي، نسائي، أطفال..."><datalist id="cl">${[...new Set(P.map(p=>p.cat))].map(c=>`<option value="${esc(c)}">`).join('')}</datalist>
+ <label for="fs">المقاسات (مفصولة بفاصلة)</label><input id="fs" value="${esc(e.sizes)}" placeholder="S, M, L, XL">
+ <label for="fd">الوصف</label><textarea id="fd" rows="3">${esc(e.desc)}</textarea>
+ <label for="fi">الصورة</label><input id="fi" type="file" accept="image/*">
+ <div id="pv">${e.img?`<img src="${esc(e.img)}" alt="" width="90" style="margin-top:8px;border-radius:6px">`:''}</div>
+ <div class="err" id="fe"></div>
+ <div class="row"><button class="btn" id="fsv">${editId?'حفظ التعديل':'إضافة المنتج'}</button>${editId?'<button class="btn o" id="fcx">إلغاء</button>':''}</div>
+ <h3 style="margin-top:30px">المنتجات (${ar(P.length)})</h3>
+ ${P.map(p=>`<div class="item">${p.img?`<img src="${esc(p.img)}" alt="">`:'<div class="t"></div>'}<b>${esc(p.name)}<br><small>${money(p.price)}</small></b><button class="btn o" data-e="${esc(p.id)}">تعديل</button><button class="btn d" data-d="${esc(p.id)}">حذف</button></div>`).join('')||'<p class="empty">لا توجد منتجات بعد. أضف أول منتج من الأعلى.</p>'}
+ <h3 style="margin-top:30px">رقم واتساب لاستقبال الطلبات</h3>
+ <label for="wa">بالصيغة الدولية بدون + (مثال: 213550123456)</label><input id="wa" type="tel" inputmode="numeric" value="${esc(T.wa)}">
+ <div class="row"><button class="btn" id="wsv">حفظ الرقم</button></div><div class="err" id="we"></div>`;
+ $('lo').onclick=closeAdmin;
+ let img=e.img;
+ $('fi').onchange=ev=>{const f=ev.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const m=720,k=Math.min(1,m/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=im.width*k;c.height=im.height*k;c.getContext('2d').drawImage(im,0,0,c.width,c.height);img=c.toDataURL('image/jpeg',.8);$('pv').innerHTML=`<img src="${img}" alt="" width="90" style="margin-top:8px;border-radius:6px">`};im.src=r.result};r.readAsDataURL(f)};
+ $('fsv').onclick=async()=>{
+  const name=$('fn').value.trim(),price=Number($('fp').value);
+  if(!name||!(price>0)){$('fe').textContent='أدخل اسم المنتج وسعرًا صحيحًا.';return}
+  $('fsv').disabled=true;$('fe').textContent='جارٍ الحفظ...';
+  try{
+   let im=img;
+   if(im&&im.startsWith('data:')){const id='i'+Date.now();await api({a:'img',token:tok,id,data:im});im='/api?img='+id}
+   const o={id:editId||'p'+Date.now(),name,price,cat:$('fc').value.trim(),sizes:$('fs').value.trim(),desc:$('fd').value.trim(),img:im||''};
+   const nx=editId?P.map(p=>p.id===editId?o:p):[o,...P];
+   if(await persist(nx,T)){editId=null;panel()}else $('fsv').disabled=false;
+  }catch(er){if(er.message==='401')gate('انتهت الجلسة. أدخل كلمة السر مجددًا.');else{$('fe').textContent=er.message;$('fsv').disabled=false}}};
+ if(editId)$('fcx').onclick=()=>{editId=null;panel()};
+ $('admc').onclick=async ev=>{const b=ev.target.closest('[data-e],[data-d]');if(!b)return;
+  if(b.dataset.e){editId=b.dataset.e;panel();$('adm').scrollTo(0,0)}
+  else if(confirm('حذف هذا المنتج نهائيًا؟')){if(await persist(P.filter(p=>p.id!==b.dataset.d),T))panel()}};
+ $('wsv').onclick=async()=>{const ok=await persist(P,{...T,wa:$('wa').value.replace(/\D/g,'')});if(ok)$('we').textContent='تم حفظ الرقم.'};
+}
+load();
+</script>
+</body>
+</html>
